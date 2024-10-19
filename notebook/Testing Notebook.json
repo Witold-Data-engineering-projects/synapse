@@ -1,0 +1,63 @@
+{
+	"name": "Testing Notebook",
+	"properties": {
+		"nbformat": 4,
+		"nbformat_minor": 2,
+		"bigDataPool": {
+			"referenceName": "FirstTestPool",
+			"type": "BigDataPoolReference"
+		},
+		"sessionProperties": {
+			"driverMemory": "28g",
+			"driverCores": 4,
+			"executorMemory": "28g",
+			"executorCores": 4,
+			"numExecutors": 2,
+			"conf": {
+				"spark.dynamicAllocation.enabled": "false",
+				"spark.dynamicAllocation.minExecutors": "2",
+				"spark.dynamicAllocation.maxExecutors": "2",
+				"spark.autotune.trackingId": "13a54d3f-dc35-42f8-a44e-5d751b6c85e3"
+			}
+		},
+		"metadata": {
+			"saveOutput": true,
+			"enableDebugMode": false,
+			"kernelspec": {
+				"name": "synapse_pyspark",
+				"display_name": "Synapse PySpark"
+			},
+			"language_info": {
+				"name": "python"
+			},
+			"a365ComputeOptions": {
+				"id": "/subscriptions/8a72e470-f667-4258-a82d-722d485baee7/resourceGroups/training_res/providers/Microsoft.Synapse/workspaces/synapsetrainings/bigDataPools/FirstTestPool",
+				"name": "FirstTestPool",
+				"type": "Spark",
+				"endpoint": "https://synapsetrainings.dev.azuresynapse.net/livyApi/versions/2019-11-01-preview/sparkPools/FirstTestPool",
+				"auth": {
+					"type": "AAD",
+					"authResource": "https://dev.azuresynapse.net"
+				},
+				"sparkVersion": "3.4",
+				"nodeCount": 10,
+				"cores": 4,
+				"memory": 28,
+				"automaticScaleJobs": false
+			},
+			"sessionKeepAliveTimeout": 30
+		},
+		"cells": [
+			{
+				"cell_type": "code",
+				"source": [
+					"from urllib.request import Request, urlopen\r\n",
+					"import json\r\n",
+					"import pandas as pd\r\n",
+					"from pyspark.sql import SparkSession"
+				],
+				"execution_count": 5
+			}
+		]
+	}
+}
